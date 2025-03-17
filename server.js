@@ -18,12 +18,10 @@ connectDB();
 
 // Configure CORS
 app.use(cors({
-  origin: ["http://localhost:5173", "https://nunitium-blog.vercel.app", "nunitium-blog.vercel.app", "https://nunitium-blog.vercel.app/login", 
-    "nunitium-blog.vercel.app/login"
-  ], // Allow requests from frontend
-  credentials: true, // Enable credentials (if using cookies or auth headers)
-  methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+  origin: ["http://localhost:5173", "https://nunitium-blog.vercel.app"], // Fixed origin
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Added OPTIONS
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 
