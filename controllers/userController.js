@@ -28,6 +28,10 @@ const registerUser = asyncHandler(async (req, res) => {
     email,
     description,
     password: hashedPassword,
+    public_id: "",
+    user_img: "",
+    city: "",
+    state: ""
   });
 
 
@@ -40,6 +44,10 @@ const registerUser = asyncHandler(async (req, res) => {
         email: user.email,
         username: user.username,
         description: user.description,
+        public_id: "",
+        user_img: "",
+        city: "",
+        state: ""
       });
   } else {
     res.status(400);
